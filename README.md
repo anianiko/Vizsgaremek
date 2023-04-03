@@ -16,7 +16,7 @@ Techstack:
 - Git
 
 Elérési linkek:
-- tesztelt weboldal: https://lennertamas.github.io/blondesite/
+- tesztelt weboldal: https://lennertamas.github.io/roxo/
 - vizsgaremek GitHub repo: https://github.com/anianiko/Vizsgaremek.git
 - Allure riport: ..........................................
 

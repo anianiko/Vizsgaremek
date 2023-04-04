@@ -20,8 +20,8 @@ Techstack:
 Elérési linkek:
 - tesztelt weboldal: https://lennertamas.github.io/blondesite/
 - vizsgaremek GitHub repo: https://github.com/anianiko/Vizsgaremek.git
-- generált tesztjelentés (Allure riport): ..........................................
-- tesztesetek és bug report: ..................................
+- generált tesztjelentés (Allure riport): https://anianiko.github.io/Vizsgaremek/
+- tesztesetek és bug report: https://github.com/anianiko/Vizsgaremek/blob/master/Tesztmenedzser.xlsx
 
 Tesztelt funkciók:
 - regisztráció (TestRegistration)

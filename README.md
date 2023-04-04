@@ -1,38 +1,43 @@
 VIZSGAREMEK
 
 
-Készítette:
++ Készítette: 
 Szerémyné Dunai Anikó Anna
 
-Mentor:
++ Mentor:
 Lenner Tamás
 
-Képzés:
++ Képzés:
 Codecool - Junior automata tesztelő
 
 Techstack:
-- Java
+- Java, JUnit5
 - Selenium WebDriver
 - Git
+- GitHub CI/CD
+- Allure
 
 Elérési linkek:
-- tesztelt weboldal: https://lennertamas.github.io/roxo/
+- tesztelt weboldal: https://lennertamas.github.io/blondesite/
 - vizsgaremek GitHub repo: https://github.com/anianiko/Vizsgaremek.git
-- Allure riport: ..........................................
+- generált tesztjelentés (Allure riport): ..........................................
+- tesztesetek és bug report: ..................................
 
 Tesztelt funkciók:
-- regisztráció
-- bejelentkezés
-- adatkezelési nyilatkozat használata
-- adatok listázása
-- több oldalas lista bejárása
-- új adat bevitel
-- ismételt és sorozatos adatbevitel adatforrásból
-- meglévő adat módosítás
-- adat vagy adatok törlése
-- adatok lementése felületről
-- kijelentkezés
+- regisztráció (TestRegistration)
+- bejelentkezés (TestLogin)
+- adatkezelési nyilatkozat használata (TestPrivacyStatementUsage)
+- adatok listázása (TestListingDatas)
+- több oldalas lista bejárása (TestPostsOnBlondesite)
+- új adat bevitel (TestNewDataInput)
+- ismételt és sorozatos adatbevitel adatforrásból (TestDataInputFromSource)
+- meglévő adat módosítás (TestDataModification)
+- adat vagy adatok törlése (TestDeleteDatas)
+- adatok lementése felületről (TestDownloadDatas)
+- kijelentkezés (TestLogout)
 
 Tesztek futtatásának manuális és automatizált módja:
-......................................
+- manuális mód: a tesztek Java nyelven, JUnit5 rendszerben íródtak, így a tesztek futtatásához Java környezet és egy IDE (pl. IntelliJ) szükséges.
+- automatizált mód: a tesztek automata futása és a riport létrejötte minden git push-t követően létrejön.
+
 

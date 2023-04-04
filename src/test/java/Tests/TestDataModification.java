@@ -4,8 +4,9 @@ import TestEnvironment.TestEnvironment;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
 
-public class TestDataModification extends TestEnvironment {
+public class TestDataModification {
 
     @Test
     @Epic("BlondeSite")
@@ -14,6 +15,8 @@ public class TestDataModification extends TestEnvironment {
     //@DisplayName(".................")
     @Severity(SeverityLevel.NORMAL)
     public void ModificationProfileTest(){
+
+        //TODO
 
     }
 }

@@ -2,6 +2,7 @@ package TestEnvironment;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.*;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.OutputType;
@@ -15,12 +16,18 @@ import java.time.Duration;
 
 public class TestEnvironment {
 
-    WebDriver driver;
+    public WebDriver driver;
 
+    public TestEnvironment (WebDriver driver){
+        this.driver = driver;
+    }
+
+    /*
     @BeforeEach
     public void init() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.setAcceptInsecureCerts(true);
         options.addArguments("ignore-certificate-errors");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
@@ -42,4 +49,16 @@ public class TestEnvironment {
     public void makeScreenshot(){
         Allure.addAttachment("Screenshot of tested page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
     }
+
+    @AfterEach
+    public void quitDriver(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        driver.quit();
+    }
+
+     */
 }

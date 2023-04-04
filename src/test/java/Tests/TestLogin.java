@@ -48,8 +48,8 @@ public class TestLogin  {
 
 
     @Test
-    @Epic("BlondeSite")
-    @Story("User login")
+    @Epic("User login/logout")
+    //@Story("User login")
     @Description("User accept Terms&Conditions and log in with registered username and password.")
     @Severity(SeverityLevel.NORMAL)
     public void loginTest(){
@@ -71,8 +71,8 @@ public class TestLogin  {
     }
 
     @Test
-    @Epic("BlondeSite")
-    @Story("User logout")
+    @Epic("User login/logout")
+    //@Story("User logout")
     @Description("User accept Terms&Conditions, log in with registered username/password and log out from the site.")
     @Severity(SeverityLevel.NORMAL)
     public void logoutTest() throws InterruptedException {
@@ -96,8 +96,8 @@ public class TestLogin  {
     }
 
     @AfterEach
-    @Epic("BlondeSite")
-    @Story("Make screenshot for report")
+    @Epic("Make screenshot for report")
+    //@Story("Make screenshot for report")
     @Description("Make screenshot after each test")
     @Severity(SeverityLevel.CRITICAL)
     public void makeScreenshot(){

@@ -52,8 +52,8 @@ public class TestRegistration {
 
 
     @Test
-    @Epic("BlondeSite")
-    @Story("User registration")
+    @Epic("User registration")
+    //@Story("User registration")
     @Description("A new user accept Terms&Conditions and register on the site.")
     @Severity(SeverityLevel.NORMAL)
     public void registerTest() {
@@ -76,8 +76,8 @@ public class TestRegistration {
     }
 
     @AfterEach
-    @Epic("BlondeSite")
-    @Story("Make screenshot for report")
+    @Epic("Make screenshot for report")
+   // @Story("Make screenshot for report")
     @Description("Make screenshot after each test")
     @Severity(SeverityLevel.CRITICAL)
     public void makeScreenshot(){

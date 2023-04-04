@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Apr 04 21:17:49 GMT 2023","Tue Apr 04 21:17:51 GMT 2023","1358","","Tests.TestLogin","","Tests.TestLogin","loginTest","loginTest()","User accept Terms&Conditions and log in with registered username and password."
+"passed","Tue Apr 04 21:17:51 GMT 2023","Tue Apr 04 21:17:54 GMT 2023","3339","","Tests.TestLogin","","Tests.TestLogin","logoutTest","logoutTest()","User accept Terms&Conditions, log in with registered username/password and log out from the site."
+"passed","Tue Apr 04 21:17:54 GMT 2023","Tue Apr 04 21:17:54 GMT 2023","1","","Tests.TestDataModification","","Tests.TestDataModification","ModificationProfileTest","ModificationProfileTest()","......................."
+"passed","Tue Apr 04 21:17:46 GMT 2023","Tue Apr 04 21:17:49 GMT 2023","3822","","Tests.TestRegistration","","Tests.TestRegistration","registerTest","registerTest()","A new user accept Terms&Conditions and register on the site."

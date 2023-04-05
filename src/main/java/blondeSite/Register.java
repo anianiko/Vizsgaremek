@@ -34,7 +34,13 @@ public class Register extends BasePage{
         driver.navigate().to(URL);
         driver.findElement(findRegisterTab).click();
     }
+/*
+    public void pushRegisterTab(){
+        driver.findElement(findRegisterTab).click();
+    }
 
+
+ */
     public void writeNewUsername(String username){
         driver.findElement(findRegisterUsername).sendKeys(username);
     }
@@ -54,6 +60,17 @@ public class Register extends BasePage{
     public void pushRegisterButton(){
         driver.findElement(findRegisterButton).click();
     }
+
+
+    public void makeNewRegistration(String username, String password, String emailAddress, String description){
+        driver.findElement(findRegisterTab).click();   //ezt a sort pushRegisterTab()-bal helyettesíteni?
+        writeNewUsername(username);
+        writeNewPassword(password);
+        writeNewEmailAddress(emailAddress);
+        writeNewDescription(description);
+        pushRegisterButton();
+    }
+
 
     public String registerMessageResult(){
         String registerMessage = driver.findElement(RegisterAlert).getText();

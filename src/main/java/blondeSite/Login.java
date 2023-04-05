@@ -31,6 +31,9 @@ public class Login extends BasePage{
         driver.navigate().to(URL);
         driver.findElement(findLoginTab).click();
     }
+    public void pushLoginTab(){
+        driver.findElement(findLoginTab).click();
+    }
 
     public void writeLoginUsername(String username){
         driver.findElement(findLoginUsername).sendKeys(username);
@@ -63,4 +66,12 @@ public class Login extends BasePage{
         driver.findElement(findLogoutButton).click();
     }
 
+    /*
+    public void loginWithDatas(String username, String password){
+        writeLoginUsername(username);
+        writeLoginPassword(password);
+        pushLoginButton();
+    }
+
+     */
 }

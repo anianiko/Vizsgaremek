@@ -2,7 +2,6 @@ package TestEnvironment;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.*;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.OutputType;
@@ -17,15 +16,6 @@ import java.time.Duration;
 public class TestEnvironment {
 
     public WebDriver driver;
-
-    /*
-    public TestEnvironment (WebDriver driver){
-        this.driver = driver;
-    }
-
-
-     */
-
 
     @BeforeEach
     public void init() {
@@ -49,7 +39,6 @@ public class TestEnvironment {
     public void dispose() {
         makeScreenshot("End of the test.");
         driver.quit();
-
     }
 
     public void makeScreenshot(String title){

@@ -26,7 +26,7 @@ Elérési linkek:
 Tesztelt funkciók:
 - regisztráció (TestRegistration)
 - bejelentkezés (TestLoginLogout)
-- adatkezelési nyilatkozat használata (TestPrivacyStatementUsage)
+- adatkezelési nyilatkozat használata (TestTermsAndConditions)
 - adatok listázása (TestListingDatas)
 - több oldalas lista bejárása (TestPostsOnBlondesite)
 - új adat bevitel (TestNewDataInput)

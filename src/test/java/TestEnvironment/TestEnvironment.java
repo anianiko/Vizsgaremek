@@ -18,11 +18,15 @@ public class TestEnvironment {
 
     public WebDriver driver;
 
+    /*
     public TestEnvironment (WebDriver driver){
         this.driver = driver;
     }
 
-    /*
+
+     */
+
+
     @BeforeEach
     public void init() {
         WebDriverManager.chromedriver().setup();
@@ -33,7 +37,7 @@ public class TestEnvironment {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-extensions");
-        //options.addArguments("--headless");   //visszakapcsolni push előtt
+        options.addArguments("--headless");   //visszakapcsolni push előtt
         options.addArguments("--window-size=1920,1080");
         options.addArguments("start-maximized");
         options.addArguments("--remote-allow-origins=*");
@@ -42,23 +46,13 @@ public class TestEnvironment {
     }
 
     @AfterEach
-    @Epic("BlondeSite")
-    @Story("Make screenshot")
-    @Description("Make screenshot after each test")
-    @Severity(SeverityLevel.CRITICAL)
-    public void makeScreenshot(){
-        Allure.addAttachment("Screenshot of tested page", new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
-    }
-
-    @AfterEach
-    public void quitDriver(){
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e){
-            e.printStackTrace();
-        }
+    public void dispose() {
+        makeScreenshot("End of the test.");
         driver.quit();
+
     }
 
-     */
+    public void makeScreenshot(String title){
+        Allure.addAttachment(title, new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
+    }
 }

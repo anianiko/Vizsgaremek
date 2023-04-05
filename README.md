@@ -25,7 +25,7 @@ Elérési linkek:
 
 Tesztelt funkciók:
 - regisztráció (TestRegistration)
-- bejelentkezés (TestLogin)
+- bejelentkezés (TestLoginLogout)
 - adatkezelési nyilatkozat használata (TestPrivacyStatementUsage)
 - adatok listázása (TestListingDatas)
 - több oldalas lista bejárása (TestPostsOnBlondesite)
@@ -34,7 +34,7 @@ Tesztelt funkciók:
 - meglévő adat módosítás (TestDataModification)
 - adat vagy adatok törlése (TestDeleteDatas)
 - adatok lementése felületről (TestDownloadDatas)
-- kijelentkezés (TestLogout)
+- kijelentkezés (TestLoginLogout)
 
 Tesztek futtatásának manuális és automatizált módja:
 - manuális mód: a tesztek Java nyelven, JUnit5 rendszerben íródtak, így a tesztek futtatásához Java környezet és egy IDE (pl. IntelliJ) szükséges.

@@ -18,9 +18,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.ByteArrayInputStream;
 import java.time.Duration;
 
-public class TestRegistration {
+public class TestRegistration extends TestEnvironment{
 
-
+/*
     WebDriver driver;
 
 
@@ -34,7 +34,7 @@ public class TestRegistration {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-extensions");
-        options.addArguments("--headless");   //visszakapcsolni push előtt
+        //options.addArguments("--headless");   //visszakapcsolni push előtt
         options.addArguments("--window-size=1920,1080");
         options.addArguments("start-maximized");
         options.addArguments("--remote-allow-origins=*");
@@ -42,6 +42,8 @@ public class TestRegistration {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
+
+ */
     String NEW_USERNAME = "dunaianiko";
     String NEW_PASSWORD = "mammamia123";
     String NEW_EMAIL = "cool@code.com";
@@ -53,7 +55,6 @@ public class TestRegistration {
 
     @Test
     @Epic("User registration")
-    //@Story("User registration")
     @Description("A new user accept Terms&Conditions and register on the site.")
     @Severity(SeverityLevel.NORMAL)
     public void registerTest() {
@@ -74,10 +75,9 @@ public class TestRegistration {
         String actualResult = register.registerMessageResult();
         Assertions.assertEquals(expectedResult, actualResult);
     }
-
+/*
     @AfterEach
     @Epic("Make screenshot for report")
-   // @Story("Make screenshot for report")
     @Description("Make screenshot after each test")
     @Severity(SeverityLevel.CRITICAL)
     public void makeScreenshot(){
@@ -85,4 +85,6 @@ public class TestRegistration {
     }
 
 
+
+ */
 }

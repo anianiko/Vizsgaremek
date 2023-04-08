@@ -25,8 +25,10 @@ public class TestNewDataInput extends TestEnvironment {
 
         Contact contact = new Contact(driver);
 
+
         contact.navigate();
         contact.writeContactMail(CONTACT_NAME, CONTACT_EMAIL, CONTACT_SUBJECT, CONTACT_MESSAGE);
+        makeScreenshot("Filled contact fields");
 
         Assertions.assertFalse(contact.isContactErrorMessage());  //hibaüzenetre vizsgálunk rá. Ha nem volt hibaüzenet, akkor false-t ad.
 

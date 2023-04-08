@@ -17,6 +17,8 @@ public class Contact extends BasePage{
 
     private final By findContactSubmitButton = By.xpath("//*[@value='Submit']");
 
+    private final By findContactErrorMessage = By.xpath("//p[text()='Form not found.']");  //beküldés utáni hibaüzenet
+
     //konstruktor
     public Contact(WebDriver driver) {
         super(driver);
@@ -32,7 +34,7 @@ public class Contact extends BasePage{
         driver.findElement(findContactYourName).sendKeys(name);
     }
 
-    public void writeContactEmail(String mail){
+    public void writeContactEmailAddress(String mail){
         driver.findElement(findContactEmailAddress).sendKeys(mail);
     }
 
@@ -44,6 +46,23 @@ public class Contact extends BasePage{
         driver.findElement(findContactMessage).sendKeys(message);
     }
 
+    //hibaüzenetre keresünk rá
+    public boolean isContactErrorMessage(){
+        try {
+            driver.findElement(findContactErrorMessage);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+
+    }
+    public void writeContactMail(String name, String mail, String subject, String message){
+        writeContactName(name);
+        writeContactEmailAddress(mail);
+        writeContactSubject(subject);
+        writeContactMessage(message);
+        pushSubmitButton();
+    }
     public void pushSubmitButton(){
         driver.findElement(findContactSubmitButton).click();
     }

@@ -61,7 +61,6 @@ public class Contact extends BasePage{
         writeContactEmailAddress(mail);
         writeContactSubject(subject);
         writeContactMessage(message);
-        pushSubmitButton();
     }
     public void pushSubmitButton(){
         driver.findElement(findContactSubmitButton).click();

@@ -13,9 +13,9 @@ import org.junit.jupiter.api.Test;
 public class TestNewDataInput extends TestEnvironment {
 
     @Test
-    @Epic("User login/logout")
-    @Description("User accept Terms&Conditions and log in with registered username and password.")
-    @Severity(SeverityLevel.NORMAL)
+    @Epic("Contact form")
+    @Description("User send a message via contact form.")
+    @Severity(SeverityLevel.CRITICAL)
     public void sendMessageTest(){
 
         String CONTACT_NAME = "Aniko";

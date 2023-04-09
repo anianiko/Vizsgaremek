@@ -2,6 +2,7 @@ package blondeSite;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class Profile extends BasePage{
 
@@ -20,6 +21,9 @@ public class Profile extends BasePage{
     private final By findDeleteAccountButton = By.xpath("//button[@onclick='showRealDeleteAccBtn()']");
 
     private final By findDeleteAccountIAmSureButton = By.xpath("//button[@onclick='deleteAccount()']");
+
+
+    private final By findEditAlert = By.id("edit-alert");
 
     //konstruktor
     public Profile(WebDriver driver) {
@@ -60,9 +64,27 @@ public class Profile extends BasePage{
     }
 
 
-    public void modifyMessageResult(){
-        //TODO ide megírni egy metódust, ami kikeresi az adatmódosítás sikeres létrejöttének visszaigazolását
-        //nem működik az oldalon az adatmentés
+    //edit-alert csak sikeres módosítás után jelenik meg (style), így csekkolható getAttribute-tal is
+    public boolean profileModifySuccessMessage(){
+        WebElement editAlert = driver.findElement(findEditAlert);
+        String valueOfEditAlertStyleAttribute = editAlert.getAttribute("style");
+        String expectedValue = "display: block;";
+        if (valueOfEditAlertStyleAttribute.equals(expectedValue))
+            return true;
+        else
+            return false;
     }
 
+    //másik megoldás egy olyan metódust, ami kikeresi az adatmódosítás sikeres létrejöttének visszaigazolását
+/*
+    public String profileModifyAlertMessage(){
+        String profileModifyAlertMessage = driver.findElement(findEditAlert).getText();
+        return profileModifyAlertMessage;
+    }
+
+ */
+
+
 }
+
+

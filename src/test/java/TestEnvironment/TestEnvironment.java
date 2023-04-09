@@ -1,5 +1,8 @@
 package TestEnvironment;
 
+import blondeSite.Login;
+import blondeSite.Register;
+import blondeSite.TermsAndConditions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.AfterEach;
@@ -39,6 +42,28 @@ public class TestEnvironment {
     public void dispose() {
         makeScreenshot("End of the test.");
         driver.quit();
+    }
+
+
+    public void loginWithNewRegistration(String username, String password, String email, String description){
+        Register register = new Register(driver);
+        TermsAndConditions acceptTerms = new TermsAndConditions(driver);
+
+        acceptTerms.navigate();
+        acceptTerms.clickOnAcceptButton();
+
+        register.navigateToRegisterTab();
+        register.writeNewUsername(username);
+        register.writeNewPassword(password);
+        register.writeNewEmailAddress(email);
+        register.writeNewDescription(description);
+        register.pushRegisterButton();
+
+        Login login = new Login(driver);
+        login.navigateToLoginTab();
+        login.writeLoginUsername(username);
+        login.writeLoginPassword(password);
+        login.pushLoginButton();
     }
 
     public void makeScreenshot(String title){

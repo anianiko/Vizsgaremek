@@ -21,6 +21,7 @@ public class TestRegistration extends TestEnvironment{
     @Description("A new user accept Terms&Conditions and register on the site.")
     @Severity(SeverityLevel.NORMAL)
     public void registerTest() {
+
         Register register = new Register(driver);
         TermsAndConditions acceptTerms = new TermsAndConditions(driver);
 

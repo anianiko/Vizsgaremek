@@ -66,12 +66,12 @@ public class Login extends BasePage{
         driver.findElement(findLogoutButton).click();
     }
 
-    /*
-    public void loginWithDatas(String username, String password){
+
+    public void loginWithData(String username, String password){
         writeLoginUsername(username);
         writeLoginPassword(password);
         pushLoginButton();
     }
 
-     */
+
 }

@@ -44,7 +44,6 @@ public class TestEnvironment {
         driver.quit();
     }
 
-
     public void loginWithNewRegistration(String username, String password, String email, String description){
         Register register = new Register(driver);
         TermsAndConditions acceptTerms = new TermsAndConditions(driver);

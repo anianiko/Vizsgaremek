@@ -22,7 +22,6 @@ public class Profile extends BasePage{
 
     private final By findDeleteAccountIAmSureButton = By.xpath("//button[@onclick='deleteAccount()']");
 
-
     private final By findEditAlert = By.id("edit-alert");
 
     //konstruktor
@@ -48,7 +47,7 @@ public class Profile extends BasePage{
     }
 
     public void clickOnDeleteAccountSureButton() {
-        driver.findElement(findDeleteAccountIAmSureButton);
+        driver.findElement(findDeleteAccountIAmSureButton).click();
     }
 
     public void writeIntoNameField(String name) {

@@ -12,7 +12,7 @@ public class TestDataModification extends TestEnvironment{
     @Epic("Modify profile data")
     @Description("User modify profile data on Profile subpage.")
     @Severity(SeverityLevel.NORMAL)
-    public void ModificationProfileTest(){
+    public void modificationProfileTest(){
 
         String USERNAME = "Anna";
         String PASSWORD = "mammamia123";

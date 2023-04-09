@@ -14,7 +14,7 @@ public class TestLoginLogout extends TestEnvironment{
 
 
     @Test
-    @Epic("User login/logout")
+    @Epic("Login/logout")
     @Description("User accept Terms&Conditions and log in with registered username and password.")
     @Severity(SeverityLevel.NORMAL)
     public void loginTest(){
@@ -35,7 +35,7 @@ public class TestLoginLogout extends TestEnvironment{
     }
 
     @Test
-    @Epic("User login/logout")
+    @Epic("Login/logout")
     @Description("User accept Terms&Conditions, log in with registered username/password and log out from the site.")
     @Severity(SeverityLevel.NORMAL)
     public void logoutTest() {

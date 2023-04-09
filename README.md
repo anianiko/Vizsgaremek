@@ -27,13 +27,13 @@ Tesztelt funkciók:
 - regisztráció (TestRegistration)
 - bejelentkezés (TestLoginLogout)
 - adatkezelési nyilatkozat használata (TestTermsAndConditions)
-- adatok listázása (TestListingDatas)
+- adatok listázása (TestListingData)
 - több oldalas lista bejárása (TestPostsOnBlondesite)
 - új adat bevitel (TestNewDataInput)
 - ismételt és sorozatos adatbevitel adatforrásból (TestDataInputFromSource)
 - meglévő adat módosítás (TestDataModification)
-- adat vagy adatok törlése (TestDeleteDatas)
-- adatok lementése felületről (TestDownloadDatas)
+- adat vagy adatok törlése (TestDeleteData)
+- adatok lementése felületről (TestDownloadData)
 - kijelentkezés (TestLoginLogout)
 
 Tesztek futtatásának manuális és automatizált módja:

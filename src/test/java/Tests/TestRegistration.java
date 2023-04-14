@@ -5,20 +5,16 @@ import blondeSite.TermsAndConditions;
 import blondeSite.Register;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
 public class TestRegistration extends TestEnvironment{
 
-    String NEW_USERNAME = "dunaianiko";
-    String NEW_PASSWORD = "mammamia123";
-    String NEW_EMAIL = "cool@code.com";
-    String NEW_DESCRIPTION = "Tester";
-
-
     @Test
     @Epic("Registration")
     @Description("A new user accept Terms&Conditions and register on the site.")
+    @DisplayName("Registration test")
     @Severity(SeverityLevel.NORMAL)
     public void registerTest() {
 
@@ -29,10 +25,10 @@ public class TestRegistration extends TestEnvironment{
         acceptTerms.clickOnAcceptButton();
 
         register.navigateToRegisterTab();
-        register.writeNewUsername(NEW_USERNAME);
-        register.writeNewPassword(NEW_PASSWORD);
-        register.writeNewEmailAddress(NEW_EMAIL);
-        register.writeNewDescription(NEW_DESCRIPTION);
+        register.writeNewUsername(Constans.USERNAME);
+        register.writeNewPassword(Constans.PASSWORD);
+        register.writeNewEmailAddress(Constans.EMAIL);
+        register.writeNewDescription(Constans.DESCRIPTION);
         register.pushRegisterButton();
 
         String expectedResult ="User registered!";

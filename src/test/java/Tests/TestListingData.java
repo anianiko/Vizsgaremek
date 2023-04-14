@@ -7,6 +7,7 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -35,16 +36,11 @@ public class TestListingData extends TestEnvironment {
     @Test
     @Epic("Table data")
     @Description("We compare names from table with txt file.")
+    @DisplayName("Get names from table test")
     @Severity(SeverityLevel.NORMAL)
     public void getNamesFromTableTest() {
 
-        String USERNAME = "Anna";
-        String PASSWORD = "mammamia123";
-        String EMAIL = "cool@code.com";
-        String DESCRIPTION = "Tester";
-
-        //TestEnvironmentbe kiemelt reg+login metódus
-        loginWithNewRegistration(USERNAME, PASSWORD, EMAIL, DESCRIPTION);
+        loginWithNewRegistration(Constans.USERNAME, Constans.PASSWORD, Constans.EMAIL, Constans.DESCRIPTION);
 
         MarkdownSyntax markdownSyntax = new MarkdownSyntax(driver);
 
@@ -58,16 +54,11 @@ public class TestListingData extends TestEnvironment {
     @Test
     @Epic("Table data")
     @Description("We compare ages from table with test data.")
+    @DisplayName("Get ages from table test")
     @Severity(SeverityLevel.NORMAL)
     public void getAgesFromTableTest() {
 
-        String USERNAME = "Anna";
-        String PASSWORD = "mammamia123";
-        String EMAIL = "cool@code.com";
-        String DESCRIPTION = "Tester";
-
-        //TestEnvironmentbe kiemelt reg+login metódus
-        loginWithNewRegistration(USERNAME, PASSWORD, EMAIL, DESCRIPTION);
+        loginWithNewRegistration(Constans.USERNAME, Constans.PASSWORD, Constans.EMAIL, Constans.DESCRIPTION);
 
         MarkdownSyntax markdownSyntax = new MarkdownSyntax(driver);
 

@@ -8,6 +8,7 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
@@ -17,6 +18,7 @@ public class TestTermsAndConditions extends TestEnvironment {
     @Test
     @Epic("Terms & Conditions")
     @Description("Visitor open the website for the first time and Terms&Conditions is displayed on the screen.")
+    @DisplayName("Terms & Conditions appearance test")
     @Severity(SeverityLevel.CRITICAL)
     public void isDisplayedTermsAndConditionsTest(){
         TermsAndConditions termsAndConditions = new TermsAndConditions(driver);
@@ -29,19 +31,16 @@ public class TestTermsAndConditions extends TestEnvironment {
     @Test
     @Epic("Terms & Conditions")
     @Description("Visitor open the website for the first time, reject the Terms&Conditions, so visitor cannot register on the website.")
+    @DisplayName("Registration after Rejected Terms & Conditions test")
     @Severity(SeverityLevel.CRITICAL)
     public void registrationWithRejectedTermsAndConditionsTest(){
-        String TEST_USERNAME ="Dog";
-        String TEST_PASSWORD ="Hello123";
-        String TEST_EMAIL ="dog@cool.com";
-        String TEST_DESCRIPTION ="tester";
 
         TermsAndConditions termsAndConditions = new TermsAndConditions(driver);
         termsAndConditions.navigate();
         termsAndConditions.clickOnCloseTermsButton();
 
         Register register = new Register(driver);
-        register.makeNewRegistration(TEST_USERNAME, TEST_PASSWORD, TEST_EMAIL, TEST_DESCRIPTION);
+        register.makeNewRegistration(Constans.USERNAME, Constans.PASSWORD, Constans.EMAIL, Constans.DESCRIPTION);
 
         String actualResult = register.registerMessageResult();
         String expectedResult = "User cannot register without accepting the Terms And Conditions!";

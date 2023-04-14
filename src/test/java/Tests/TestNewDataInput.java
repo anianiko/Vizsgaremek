@@ -7,6 +7,7 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
@@ -15,19 +16,14 @@ public class TestNewDataInput extends TestEnvironment {
     @Test
     @Epic("Contact form")
     @Description("User send a message via contact form.")
+    @DisplayName("Sending message via Contact form test")
     @Severity(SeverityLevel.CRITICAL)
     public void sendMessageTest(){
 
-        String CONTACT_NAME = "Aniko";
-        String CONTACT_EMAIL = "aniko@cool.com";
-        String CONTACT_SUBJECT = "say hello letter";
-        String CONTACT_MESSAGE = "Hello, the website is really great. A.";
-
         Contact contact = new Contact(driver);
 
-
         contact.navigate();
-        contact.writeContactMail(CONTACT_NAME, CONTACT_EMAIL, CONTACT_SUBJECT, CONTACT_MESSAGE);
+        contact.writeContactMail(Constans.CONTACT_NAME, Constans.CONTACT_EMAIL, Constans.CONTACT_SUBJECT, Constans.CONTACT_MESSAGE);
         makeScreenshot("Filled contact fields");
         contact.pushSubmitButton();
 

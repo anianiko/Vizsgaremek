@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class MarkdownSyntax extends BasePage {
+public class PostMarkdownSyntax extends BasePage {
 
     private final String URL= "https://lennertamas.github.io/blondesite/post/markdown-syntax/";
 
@@ -14,7 +14,7 @@ public class MarkdownSyntax extends BasePage {
 
 
     //konstruktor
-    public MarkdownSyntax(WebDriver driver) {
+    public PostMarkdownSyntax(WebDriver driver) {
         super(driver);
     }
 

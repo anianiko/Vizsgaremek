@@ -1,7 +1,7 @@
 package Tests;
 
 import TestEnvironment.TestEnvironment;
-import blondeSite.MarkdownSyntax;
+import blondeSite.PostMarkdownSyntax;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Severity;
@@ -42,7 +42,7 @@ public class TestListingData extends TestEnvironment {
 
         loginWithNewRegistration(Constans.USERNAME, Constans.PASSWORD, Constans.EMAIL, Constans.DESCRIPTION);
 
-        MarkdownSyntax markdownSyntax = new MarkdownSyntax(driver);
+        PostMarkdownSyntax markdownSyntax = new PostMarkdownSyntax(driver);
 
         markdownSyntax.navigate();
         String[] actualResult = markdownSyntax.getNamesFromTable();
@@ -60,7 +60,7 @@ public class TestListingData extends TestEnvironment {
 
         loginWithNewRegistration(Constans.USERNAME, Constans.PASSWORD, Constans.EMAIL, Constans.DESCRIPTION);
 
-        MarkdownSyntax markdownSyntax = new MarkdownSyntax(driver);
+        PostMarkdownSyntax markdownSyntax = new PostMarkdownSyntax(driver);
 
         markdownSyntax.navigate();
         String[] actualResult = markdownSyntax.getAgesFromTable();

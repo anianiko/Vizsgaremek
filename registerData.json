@@ -1,0 +1,51 @@
+[
+  {
+    "users":
+    {
+      "username": "Skye",
+      "password": "kallan123"
+    }
+  },
+  {
+    "users":
+    {
+      "username": "Ryder",
+      "password": "owen123"
+    }
+  },
+  {
+    "users":
+    {
+      "username": "Chase",
+      "password": "tristan123"
+    }
+  },
+  {
+    "users":
+    {
+      "username": "Marshall",
+      "password": "gage123"
+    }
+  },
+  {
+    "users":
+    {
+      "username": "Rocky",
+      "password": "stuart123"
+    }
+  },
+  {
+    "users":
+    {
+      "username": "Rubble",
+      "password": "devan123"
+    }
+  },
+  {
+    "users":
+    {
+      "username": "Zuma",
+      "password": "alex123"
+    }
+  }
+]

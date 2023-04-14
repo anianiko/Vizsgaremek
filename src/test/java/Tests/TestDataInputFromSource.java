@@ -13,11 +13,11 @@ import org.junit.jupiter.api.Test;
 public class TestDataInputFromSource extends TestEnvironment {
 
     @Test
-    @Epic("Login/logout")
-    @Description("Sequential login/logout using data from JSON file.")
-    @DisplayName("Sequential Login Using From JSON File Test")
+    @Epic("Registration")
+    @Description("Sequential registration using data from JSON file.")
+    @DisplayName("Sequential Registration Using JSON File Test")
     @Severity(SeverityLevel.NORMAL)
-    public void sequentialLoginUsingDataFromJSONFile(){
+    public void sequentialRegistrationUsingDataFromJSONFile(){
         //TODO
     }
 

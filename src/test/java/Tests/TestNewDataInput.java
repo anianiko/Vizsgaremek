@@ -17,7 +17,7 @@ public class TestNewDataInput extends TestEnvironment {
     @Epic("Contact form")
     @Description("User send a message via contact form.")
     @DisplayName("Sending message via Contact form test")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.NORMAL)
     public void sendMessageTest(){
 
         Contact contact = new Contact(driver);

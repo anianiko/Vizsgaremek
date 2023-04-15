@@ -3,49 +3,63 @@
     "users":
     {
       "username": "Skye",
-      "password": "kallan123"
+      "password": "kallan123",
+      "email": "skye@code.com",
+      "description": "Skye Tester"
     }
   },
   {
     "users":
     {
       "username": "Ryder",
-      "password": "owen123"
+      "password": "owen123",
+      "email": "ryder@code.com",
+      "description": "Ryder Tester"
     }
   },
   {
     "users":
     {
       "username": "Chase",
-      "password": "tristan123"
+      "password": "tristan123",
+      "email": "chase@code.com",
+      "description": "Chase Tester"
     }
   },
   {
     "users":
     {
       "username": "Marshall",
-      "password": "gage123"
+      "password": "gage123",
+      "email": "marshall@code.com",
+      "description": "Marshall Tester"
     }
   },
   {
     "users":
     {
       "username": "Rocky",
-      "password": "stuart123"
+      "password": "stuart123",
+      "email": "rocky@code.com",
+      "description": "Rocky Tester"
     }
   },
   {
     "users":
     {
       "username": "Rubble",
-      "password": "devan123"
+      "password": "devan123",
+      "email": "rubble@code.com",
+      "description": "Rubble Tester"
     }
   },
   {
     "users":
     {
       "username": "Zuma",
-      "password": "alex123"
+      "password": "alex123",
+      "email": "zuma@code.com",
+      "description": "Zuma Tester"
     }
   }
 ]

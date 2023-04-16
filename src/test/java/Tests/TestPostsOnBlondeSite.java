@@ -45,9 +45,7 @@ public class TestPostsOnBlondeSite extends TestEnvironment {
         HomePage homePage = new HomePage(driver);
 
         String[] actualResult = homePage.getTitles();
-
         String[] expectedResult = ReadFile();
-
         Assertions.assertArrayEquals(expectedResult, actualResult);
 
     }

@@ -1,6 +1,7 @@
 package Tests;
 
 import TestEnvironment.TestEnvironment;
+import blondeSite.HomePage;
 import blondeSite.PostMarkdownSyntax;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -17,11 +18,11 @@ import java.util.Scanner;
 
 public class TestListingData extends TestEnvironment {
 
-    //kiolvassa egy string tömbbe a txt sorait
-    public String[] ReadNamesFile() {
+    //kiolvassa egy string tömbbe a megadott txt fájl sorait
+    public String[] ReadTxtFile(String filename) {
         List<String> names = new ArrayList<>();
         try {
-            File text = new File("namesFromTable.txt");
+            File text = new File(filename);
             Scanner nameScan = new Scanner(text);
             while (nameScan.hasNextLine()) {
                 String name = nameScan.nextLine();
@@ -46,7 +47,7 @@ public class TestListingData extends TestEnvironment {
 
         markdownSyntax.navigate();
         String[] actualResult = markdownSyntax.getNamesFromTable();
-        String[] expectedResult = ReadNamesFile();
+        String[] expectedResult = ReadTxtFile("namesFromTable.txt");
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
@@ -65,6 +66,24 @@ public class TestListingData extends TestEnvironment {
         markdownSyntax.navigate();
         String[] actualResult = markdownSyntax.getAgesFromTable();
         String[] expectedResult = {"27", "23"};
+
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    @Epic("Tags")
+    @Description("We compare tags from BlondeSite with txt file.")
+    @DisplayName("Get tags from BlondeSite test")
+    @Severity(SeverityLevel.NORMAL)
+    public void getTagsFromBlondeSiteTest() {
+
+        loginWithNewRegistration(Constans.USERNAME, Constans.PASSWORD, Constans.EMAIL, Constans.DESCRIPTION);
+
+        HomePage homePage = new HomePage(driver);
+
+        homePage.navigate();
+        String[] actualResult = homePage.getTags();
+        String[] expectedResult = ReadTxtFile("tagList.txt");
 
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }

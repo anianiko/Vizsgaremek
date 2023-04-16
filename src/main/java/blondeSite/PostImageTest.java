@@ -41,4 +41,9 @@ public class PostImageTest extends BasePage{
         return savedFile.exists();
     }
 
+    public void deletePicture(){
+        //TODO
+
+    }
+
 }

@@ -19,10 +19,10 @@ public class PostMarkdownSyntax extends BasePage {
     }
 
 
-
     public void navigate() {
         driver.navigate().to(URL);
     }
+
 
     public String[] getNamesFromTable() {
         List<WebElement> tableRows = driver.findElements(TableRows);

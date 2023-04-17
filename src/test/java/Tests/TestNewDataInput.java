@@ -16,7 +16,7 @@ public class TestNewDataInput extends TestEnvironment {
     @Test
     @Epic("Contact form")
     @Description("User send a message via contact form.")
-    @DisplayName("Sending message via Contact form test")
+    @DisplayName("TC11 Sending message via Contact form test")
     @Severity(SeverityLevel.NORMAL)
     public void sendMessageTest(){
 

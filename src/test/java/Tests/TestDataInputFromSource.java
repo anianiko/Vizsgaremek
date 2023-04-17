@@ -25,7 +25,7 @@ public class TestDataInputFromSource extends TestEnvironment {
     @Test
     @Epic("Registration")
     @Description("Sequential registration using data from JSON file.")
-    @DisplayName("Sequential Registration Using Data From JSON File Test")
+    @DisplayName("TC04 Sequential Registration Using Data From JSON File Test")
     @Severity(SeverityLevel.NORMAL)
     public void sequentialRegistrationUsingDataFromJSONFile() throws InterruptedException, IOException, ParseException {
 

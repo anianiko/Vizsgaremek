@@ -17,6 +17,7 @@ import java.util.Scanner;
 
 public class TestPostsOnBlondeSite extends TestEnvironment {
 
+    /*
     //kiolvassa egy string tömbbe a txt sorait
     public String[] ReadFile(){
         List<String> titles = new ArrayList<>();
@@ -33,10 +34,12 @@ public class TestPostsOnBlondeSite extends TestEnvironment {
         return titles.toArray(new String[0]);
     }
 
+     */
+
     @Test
     @Epic("Posts")
     @Description("We check the post titles in a txt file.")
-    @DisplayName("Checking post titles test")
+    @DisplayName("TC15 Checking post titles test")
     @Severity(SeverityLevel.NORMAL)
     public void comparePostTitlesWithTxtTest(){
 
@@ -45,7 +48,7 @@ public class TestPostsOnBlondeSite extends TestEnvironment {
         HomePage homePage = new HomePage(driver);
 
         String[] actualResult = homePage.getTitles();
-        String[] expectedResult = ReadFile();
+        String[] expectedResult = ReadTxtFile("postTitles.txt");
         Assertions.assertArrayEquals(expectedResult, actualResult);
 
     }
@@ -53,7 +56,7 @@ public class TestPostsOnBlondeSite extends TestEnvironment {
     @Test
     @Epic("Posts")
     @Description("We count the posts on the Blonde site.")
-    @DisplayName("Counting post titles test")
+    @DisplayName("TC14 Counting post titles test")
     @Severity(SeverityLevel.NORMAL)
     public void countPostTitlesTest() {
 

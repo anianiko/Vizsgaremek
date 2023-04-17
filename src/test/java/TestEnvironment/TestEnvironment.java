@@ -12,7 +12,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class TestEnvironment {
 
@@ -71,6 +75,22 @@ public class TestEnvironment {
     }
 
      */
+
+    //kiolvassa egy string tömbbe a megadott txt fájl sorait
+    public String[] ReadTxtFile(String filename) {
+        List<String> names = new ArrayList<>();
+        try {
+            File text = new File(filename);
+            Scanner nameScan = new Scanner(text);
+            while (nameScan.hasNextLine()) {
+                String name = nameScan.nextLine();
+                names.add(name);
+            }
+        } catch (Exception e) {
+            System.out.println("File not found.");
+        }
+        return names.toArray(new String[0]);
+    }
 
     public void makeScreenshot(String title){
         Allure.addAttachment(title, new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));

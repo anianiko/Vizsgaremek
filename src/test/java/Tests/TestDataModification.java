@@ -11,7 +11,7 @@ public class TestDataModification extends TestEnvironment{
     @Test
     @Epic("Modify profile data")
     @Description("User modify profile data on Profile subpage.")
-    @DisplayName("Modify profile data test")
+    @DisplayName("TC05 Modify profile data test")
     @Severity(SeverityLevel.NORMAL)
     public void modificationProfileTest(){
 

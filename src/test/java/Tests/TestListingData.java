@@ -18,6 +18,7 @@ import java.util.Scanner;
 
 public class TestListingData extends TestEnvironment {
 
+    /*
     //kiolvassa egy string tömbbe a megadott txt fájl sorait
     public String[] ReadTxtFile(String filename) {
         List<String> names = new ArrayList<>();
@@ -34,10 +35,12 @@ public class TestListingData extends TestEnvironment {
         return names.toArray(new String[0]);
     }
 
+     */
+
     @Test
     @Epic("Table data")
     @Description("We compare names from table with txt file.")
-    @DisplayName("Get names from table test")
+    @DisplayName("TC08 Get names from table test")
     @Severity(SeverityLevel.NORMAL)
     public void getNamesFromTableTest() {
 
@@ -55,7 +58,7 @@ public class TestListingData extends TestEnvironment {
     @Test
     @Epic("Table data")
     @Description("We compare ages from table with test data.")
-    @DisplayName("Get ages from table test")
+    @DisplayName("TC09 Get ages from table test")
     @Severity(SeverityLevel.NORMAL)
     public void getAgesFromTableTest() {
 
@@ -73,7 +76,7 @@ public class TestListingData extends TestEnvironment {
     @Test
     @Epic("Tags")
     @Description("We compare tags from BlondeSite with txt file.")
-    @DisplayName("Get tags from BlondeSite test")
+    @DisplayName("TC10 Get tags from BlondeSite test")
     @Severity(SeverityLevel.NORMAL)
     public void getTagsFromBlondeSiteTest() {
 

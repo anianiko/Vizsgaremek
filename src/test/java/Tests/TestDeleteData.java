@@ -16,7 +16,7 @@ public class TestDeleteData extends TestEnvironment {
     @Test
     @Epic("Delete account")
     @Description("User delete account on Profile subpage.")
-    @DisplayName("Delete account test")
+    @DisplayName("TC06 Delete account test")
     @Severity(SeverityLevel.NORMAL)
     public void deleteProfileTest() {
 

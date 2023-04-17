@@ -14,7 +14,7 @@ public class TestRegistration extends TestEnvironment{
     @Test
     @Epic("Registration")
     @Description("A new user accept Terms&Conditions and register on the site.")
-    @DisplayName("Registration test")
+    @DisplayName("TC01 Registration test")
     @Severity(SeverityLevel.NORMAL)
     public void registerTest() {
 

@@ -13,7 +13,7 @@ public class TestLoginLogout extends TestEnvironment{
     @Test
     @Epic("Login/logout")
     @Description("User accept Terms&Conditions and log in with registered username and password.")
-    @DisplayName("Login with master username & password after acceptance of the Terms&Conditions test")
+    @DisplayName("TC02 Login with master username & password after acceptance of the Terms&Conditions test")
     @Severity(SeverityLevel.NORMAL)
     public void loginTest(){
         Login login = new Login(driver);
@@ -35,7 +35,7 @@ public class TestLoginLogout extends TestEnvironment{
     @Test
     @Epic("Login/logout")
     @Description("User accept Terms&Conditions, log in with registered username/password and log out from the site.")
-    @DisplayName("Accepting Terms&Conditions, login and logout test")
+    @DisplayName("TC03 Accepting Terms&Conditions, login and logout test")
     @Severity(SeverityLevel.NORMAL)
     public void logoutTest() {
         Login login = new Login(driver);

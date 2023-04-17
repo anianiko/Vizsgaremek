@@ -17,7 +17,7 @@ public class TestDownloadData extends TestEnvironment {
     @Test
     @Epic("Download data")
     @Description("Save a picture from the Image test post.")
-    @DisplayName("Save picture test")
+    @DisplayName("TC07 Save picture test")
     @Severity(SeverityLevel.NORMAL)
     public void savePictureTest() throws IOException, InterruptedException {
 

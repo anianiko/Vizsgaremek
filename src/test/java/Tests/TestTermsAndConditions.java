@@ -18,7 +18,7 @@ public class TestTermsAndConditions extends TestEnvironment {
     @Test
     @Epic("Terms & Conditions")
     @Description("Visitor open the website for the first time and Terms&Conditions is displayed on the screen.")
-    @DisplayName("Terms & Conditions appearance test")
+    @DisplayName("TC12 Terms & Conditions appearance test")
     @Severity(SeverityLevel.CRITICAL)
     public void isDisplayedTermsAndConditionsTest(){
         TermsAndConditions termsAndConditions = new TermsAndConditions(driver);
@@ -31,7 +31,7 @@ public class TestTermsAndConditions extends TestEnvironment {
     @Test
     @Epic("Terms & Conditions")
     @Description("Visitor open the website for the first time, reject the Terms&Conditions, so visitor cannot register on the website.")
-    @DisplayName("Registration after Rejected Terms & Conditions test")
+    @DisplayName("TC13 Registration after Rejected Terms & Conditions test")
     @Severity(SeverityLevel.CRITICAL)
     public void registrationWithRejectedTermsAndConditionsTest(){
 

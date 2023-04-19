@@ -13,9 +13,9 @@ public class HomePage extends BasePage {
 
     private final By findPostTitles = By.xpath("//*[@class='text-gray-900 font-bold text-xl mb-2 dark:text-white']");
 
-    private final By findPostCards = By.xpath("//*[@class='relative pl-4 p-2 justify-between leading-normal max-w-full w-full']");
+    //private final By findPostCards = By.xpath("//*[@class='relative pl-4 p-2 justify-between leading-normal max-w-full w-full']");
 
-    private final By findNextPageLink = By.xpath("//*[@rel='next']");
+    private final By findNextPageLink = By.xpath("//*[contains(text(), 'Next')]");
 
     //Tags
 
@@ -50,6 +50,15 @@ public class HomePage extends BasePage {
         }
         return false;
     }
+
+    /*
+    public boolean isClickableNextArrow(){
+        WebElement nextArrowResult = driver.findElement(findNextPageLink);
+        String attribute = nextArrowResult.getAttribute("rel");
+        return attribute.equals("next");
+    }
+
+     */
 
     //Find tags
     public void findCssTag(){
@@ -99,24 +108,19 @@ public class HomePage extends BasePage {
         return driver.findElements(findTags).size();
     }
 
+    /*
     //Title-ket szedi ki egy String tömbbe
-    public String[] getTitles() {
+    public void getTitles(List<String> titleListResult) {
 
         List<WebElement> titles = driver.findElements(findPostCards);
-        List<String> titleList = new ArrayList<String>();
-
-        //TODO oldal lapozás!!
 
         for (WebElement title : titles) {
             String postTitle = title.findElement(By.xpath("./div[1]")).getText();
-            titleList.add(postTitle);
+            titleListResult.add(postTitle);
         }
-
-        //String listából String tömbbé alakít
-        String[] result = new String[getPostTitlesSum()];
-        result = titleList.toArray(result);
-        return result;
     }
+
+     */
 
     //Tag-eket szedi ki egy String tömbbe
     public String[] getTags() {

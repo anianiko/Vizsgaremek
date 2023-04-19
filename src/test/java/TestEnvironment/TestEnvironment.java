@@ -28,6 +28,7 @@ public class TestEnvironment {
         ChromeOptions options = new ChromeOptions();
         options.setAcceptInsecureCerts(true);
         options.addArguments("ignore-certificate-errors");
+        options.addArguments("incognito");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-notifications");

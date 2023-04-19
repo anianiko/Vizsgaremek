@@ -18,25 +18,6 @@ import java.util.Scanner;
 
 public class TestListingData extends TestEnvironment {
 
-    /*
-    //kiolvassa egy string tömbbe a megadott txt fájl sorait
-    public String[] ReadTxtFile(String filename) {
-        List<String> names = new ArrayList<>();
-        try {
-            File text = new File(filename);
-            Scanner nameScan = new Scanner(text);
-            while (nameScan.hasNextLine()) {
-                String name = nameScan.nextLine();
-                names.add(name);
-            }
-        } catch (Exception e) {
-            System.out.println("File not found.");
-        }
-        return names.toArray(new String[0]);
-    }
-
-     */
-
     @Test
     @Epic("Table data")
     @Description("We compare names from table with txt file.")
